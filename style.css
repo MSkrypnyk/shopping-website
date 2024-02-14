@@ -4,13 +4,40 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+li {
+  list-style: none;
+  transition: 0.3s all ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-  background: rgb(226, 223, 223);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+#sign {
+  transition-duration: 10s;
 }
 
 .container {
@@ -74,13 +101,58 @@ body {
   align-items: center;
   gap: 43px;
   padding: 68px 81px 0px 82px;
+  position: relative;
 }
 
-.main-title {
+.main::before {
+  content: url(icons/star.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 90%;
+  bottom: 10%;
+}
+
+.main::after {
+  content: url(icons/star.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 81%;
+  top: 10%;
+}
+
+.main-descriotion {
+  display: inline-block;
+  position: relative;
+}
+
+.main-descriotion::before {
+  content: url(icons/star.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  bottom: 3%;
+}
+
+.main-descriotion::after {
+  content: url(icons/star.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  top: 0%;
+}
+
+.main-title-text {
   color: rgb(0, 0, 0);
   font-size: 96px;
   font-weight: 900;
   line-height: 120px;
+}
+
+.main-title {
   margin-bottom: 40px;
 }
 
@@ -122,11 +194,7 @@ body {
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-weight: 500;
-}
-
-.main-img {
-  min-width: 871px;
-  width: 100%;
+  transition: 0.3s all ease-in-out;
 }
 
 .brands {
@@ -157,8 +225,6 @@ body {
 }
 
 .card-img {
-  max-width: 484px;
-  width: 100%;
   border-radius: 20px;
   margin-bottom: 28px;
 }
@@ -184,6 +250,25 @@ body {
 
 .sale {
   display: flex;
+  position: relative;
+}
+
+.sale::before {
+  content: url(icons/star2.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 9%;
+  top: 20%;
+}
+
+.sale::after {
+  content: url(icons/star2.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 11%;
+  bottom: 40%;
 }
 
 .sale-description {
@@ -213,12 +298,35 @@ body {
   );
   color: rgb(0, 0, 0);
   font-size: 36.04px;
+  display: inline-block;
+  position: relative;
 }
 
-.sale-title {
+.sale-description::before {
+  content: url(icons/star2.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: -18%;
+  top: 10%;
+}
+
+.sale-description::after {
+  content: url(icons/star2.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: -15%;
+  bottom: 20%;
+}
+
+.sale-title-text {
   font-size: 111.61px;
   font-weight: 900;
   line-height: 137.19px;
+}
+
+.sale-title {
   margin-bottom: 33px;
 }
 
@@ -270,8 +378,212 @@ body {
 }
 
 .card-img-2 {
-  max-width: 835px;
-  width: 100%;
   border-radius: 20px;
   margin-bottom: 28px;
+}
+
+.app {
+  padding: 0 218px 200px 219px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.app::before {
+  content: url(icons/circle1.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 88%;
+  top: 11%;
+}
+
+.app::after {
+  content: url(icons/circle4.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 90%;
+  bottom: 36%;
+}
+
+.app-title {
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 41px;
+  max-width: 507px;
+  width: 100%;
+}
+
+.app-descripton {
+  position: relative;
+}
+
+.app-descripton::before {
+  content: url(icons/circle3.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 177%;
+  top: -22%;
+}
+
+.app-descripton::after {
+  content: url(icons/circle2.svg);
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 170%;
+  bottom: -37%;
+}
+
+.app-text {
+  color: rgb(124, 124, 124);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 65px;
+  max-width: 444px;
+  width: 100%;
+}
+
+.shops {
+  display: flex;
+  gap: 19px;
+}
+
+.app-img {
+  background-image: url(icons/oval1.svg), url(icons/oval2.svg),
+    url(icons/oval3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.email-group {
+  background: rgb(229, 198, 67);
+  padding: 141px 456px 156px 454px;
+}
+
+.email {
+  max-width: 1010px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.email-title {
+  color: rgb(255, 255, 255);
+  font-size: 55px;
+  font-weight: 900;
+  margin-bottom: 37px;
+}
+
+.email-text {
+  color: rgb(255, 252, 248);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 49px;
+}
+
+.wrapper {
+  max-width: 574px;
+  width: 100%;
+  min-height: 87px;
+  align-content: center;
+  position: relative;
+}
+
+input {
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  color: rgb(118, 118, 118);
+  border: none;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 27px 245px 27px 27px;
+}
+
+input:focus {
+  background-color: rgb(237, 234, 234);
+}
+
+.send {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 33px;
+  font-weight: 500;
+  padding: 17px 35px 15px 38px;
+  position: absolute;
+  top: 6px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.send:active {
+  background-color: rgb(98, 98, 98);
+  transform: scaleX(1.1);
+}
+
+.footer {
+  background: rgb(0, 0, 0);
+  padding: 119px 100px 147px 100px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+
+.footer-text {
+  color: rgb(142, 142, 142);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-group {
+  display: flex;
+  text-align: left;
+  gap: 188px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-link {
+  color: rgb(142, 142, 142);
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.footer-link:last-child {
+  margin-bottom: 0;
+}
+
+.link-color {
+  color: rgb(217, 217, 217);
 }
